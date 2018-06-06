@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyMLProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="size" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pWU-fx-NFu">
+                                <rect key="frame" x="16" y="20" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="rooms" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cuk-GZ-mwT">
+                                <rect key="frame" x="16" y="58" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifb-ef-XQ5">
+                                <rect key="frame" x="16" y="96" width="343" height="30"/>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="opV-u6-7mI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price: _____" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBR-V1-Y9w">
+                                <rect key="frame" x="16" y="134" width="343" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="f5a-Tz-kmA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pWU-fx-NFu" firstAttribute="trailing" secondItem="Cuk-GZ-mwT" secondAttribute="trailing" id="8Wy-oJ-v6D"/>
+                            <constraint firstItem="Cuk-GZ-mwT" firstAttribute="top" secondItem="pWU-fx-NFu" secondAttribute="bottom" constant="8" symbolic="YES" id="94z-tb-3AJ"/>
+                            <constraint firstItem="Cuk-GZ-mwT" firstAttribute="leading" secondItem="ifb-ef-XQ5" secondAttribute="leading" id="FFi-ms-fLZ"/>
+                            <constraint firstItem="ifb-ef-XQ5" firstAttribute="top" secondItem="Cuk-GZ-mwT" secondAttribute="bottom" constant="8" symbolic="YES" id="HQI-0r-2lb"/>
+                            <constraint firstItem="ifb-ef-XQ5" firstAttribute="trailing" secondItem="IBR-V1-Y9w" secondAttribute="trailing" id="JRJ-aO-r5v"/>
+                            <constraint firstItem="pWU-fx-NFu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="KNG-g3-qyS"/>
+                            <constraint firstItem="pWU-fx-NFu" firstAttribute="leading" secondItem="Cuk-GZ-mwT" secondAttribute="leading" id="Ont-bX-UaO"/>
+                            <constraint firstItem="IBR-V1-Y9w" firstAttribute="top" secondItem="ifb-ef-XQ5" secondAttribute="bottom" constant="8" symbolic="YES" id="d8l-fG-qS0"/>
+                            <constraint firstItem="pWU-fx-NFu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jL5-Ab-Bdr"/>
+                            <constraint firstItem="ifb-ef-XQ5" firstAttribute="leading" secondItem="IBR-V1-Y9w" secondAttribute="leading" id="mcg-7O-NmM"/>
+                            <constraint firstItem="Cuk-GZ-mwT" firstAttribute="trailing" secondItem="ifb-ef-XQ5" secondAttribute="trailing" id="oqF-EX-yZp"/>
+                            <constraint firstItem="pWU-fx-NFu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qJl-p8-Pfi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="price" destination="IBR-V1-Y9w" id="WW9-ml-EoP"/>
+                        <outlet property="rooms" destination="Cuk-GZ-mwT" id="2OI-7U-eZg"/>
+                        <outlet property="size" destination="pWU-fx-NFu" id="EdQ-fD-nbi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
