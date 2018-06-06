@@ -6,7 +6,7 @@ import CreateMLUI
 ```
 
 2nd:
-```
+```swift
 let builder = MLImageClassifierBuilder()
 builder.showInLiveView()
 ```
